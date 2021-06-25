@@ -19,8 +19,8 @@ body {
 }
 
 .main {
-  height: 66.67vh;
-  width: 60vw;
+  height: 480px;
+  width: 900px;
   display: flex;
   border-radius: 10px;
   overflow: hidden;
@@ -31,22 +31,26 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 35px;
-  color: hsla(0, 0%, 100%, 0.75);
+  padding: 45px;
 }
-
+/* 
 .img, .title, .content, .button {
-  /* border: 1px solid #000; */
-}
+  border: 1px solid #000;
+} */
 
 .img {
 
 }
 
+.nested-item {
+  margin-bottom: 30px;
+}
+
 .title {
   font-family: 'Big Shoulders Display', sans-serif;
-  font-size: 2em;
-  font-weight: 700;  
+  font-size: 2.5em;
+  font-weight: 700;
+  color: hsl(0, 0%, 95%);  
   text-transform: uppercase;
 }
 
@@ -54,18 +58,29 @@ body {
   font-family: 'Lexend Deca', sans-serif;
   font-size: 15px;
   font-weight: 400;
+  line-height: 1.5rem;
+  color: hsla(0, 0%, 100%, 0.75);
 }
 
-.button {
+.item {
 
 }
 
 button {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
   border: none;
   font-weight: bold;
   padding: 15px 2rem;
   border-radius: 2rem;
-  background-color: hsla(0, 0%, 100%, 0.75);
+  background-color: hsl(0, 0%, 95%);
+  border: 2px solid hsl(0, 0%, 95%);
+}
+
+button:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
 }
 
 .orange {
@@ -90,4 +105,18 @@ button {
 
 .very-dark-cyan-font {
   color: hsl(179, 100%, 13%)
+}
+
+@media (max-width: 500px) {
+  body {
+    align-items: flex-start;
+  }
+
+
+  .main {
+    height: 1440px;
+    width: 300px;
+    flex-direction: column;
+    margin: 2em;
+  }
 }
